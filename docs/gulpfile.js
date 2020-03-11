@@ -75,24 +75,26 @@ function createComponentImageSymlinks() {
         .pipe(dest('components/modules/ROOT/assets/images/'));
 }
 
-function deleteUserManualSymlinks() {
-    return del(['user-manual/modules/ROOT/pages/*-eip.adoc', 'user-manual/modules/ROOT/pages/*-language.adoc']);
-}
+// function deleteUserManualSymlinks() {
+//     return del(['user-manual/modules/ROOT/pages/*-eip.adoc', 'user-manual/modules/ROOT/pages/*-language.adoc']);
+// }
 
-function createUserManualSymlinks() {
-    return src(['../core/camel-base/src/main/docs/*.adoc', '../core/camel-core-languages/src/main/docs/*.adoc', '../core/camel-xml-jaxp/src/main/docs/*.adoc', '../core/camel-core-engine/src/main/docs/eips/*.adoc'])
-        // Antora disabled symlinks, there is an issue open
-        // https://gitlab.com/antora/antora/issues/188
-        // to reinstate symlink support, until that's resolved
-        // we'll simply copy over instead of creating symlinks
-        // .pipe(symlink('user-manual/modules/ROOT/pages/', {
-        //     relativeSymlinks: true
-        // }));
-        // uncomment above .pipe() and remove the .pipe() below
-        // when antora#188 is resolved
-        .pipe(insertSourceAttribute())
-        .pipe(dest('user-manual/modules/ROOT/pages/'));
-}
+// NOTE! the single adoc at ../core/camel-base/src/main/docs/*.adoc doesn't appear to have generated content.  Can it just be moved to the rest of the user manual?
+
+// function createUserManualSymlinks() {
+//     return src(['../core/camel-base/src/main/docs/*.adoc', '../core/camel-core-languages/src/main/docs/*.adoc', '../core/camel-xml-jaxp/src/main/docs/*.adoc', '../core/camel-core-engine/src/main/docs/eips/*.adoc'])
+//         // Antora disabled symlinks, there is an issue open
+//         // https://gitlab.com/antora/antora/issues/188
+//         // to reinstate symlink support, until that's resolved
+//         // we'll simply copy over instead of creating symlinks
+//         // .pipe(symlink('user-manual/modules/ROOT/pages/', {
+//         //     relativeSymlinks: true
+//         // }));
+//         // uncomment above .pipe() and remove the .pipe() below
+//         // when antora#188 is resolved
+//         .pipe(insertSourceAttribute())
+//         .pipe(dest('user-manual/modules/ROOT/pages/'));
+// }
 
 function titleFrom(file) {
     const maybeName = /(?:=|#) (.*)/.exec(file.contents.toString())
@@ -122,7 +124,7 @@ function insertSourceAttribute() {
 function createComponentNav() {
     return src('component-nav.adoc.template')
         .pipe(insertGeneratedNotice())
-        .pipe(inject(src(['../core/camel-base/src/main/docs/*-component.adoc', '../core/camel-core-languages/src/main/docs/*-component.adoc', '../components/{*,*/*}/src/main/docs/*.adoc']).pipe(sort()), {
+        .pipe(inject(src(['../core/camel-base/src/main/docs/*-component.adoc', '../components/{*,*/*}/src/main/docs/*.adoc']).pipe(sort()), {
             removeTags: true,
             transform: (filename, file) => {
                 const filepath = path.basename(filename);
@@ -137,22 +139,22 @@ function createComponentNav() {
 function createUserManualNav() {
     return src('user-manual-nav.adoc.template')
         .pipe(insertGeneratedNotice())
-        .pipe(inject(src('../core/camel-base/src/main/docs/*.adoc').pipe(sort()), {
+        .pipe(inject(src('../core/camel-core-languages/src/main/docs/modules/languages/pages/*.adoc').pipe(sort()), {
             removeTags: true,
             name: 'languages',
             transform: (filename, file) => {
                 const filepath = path.basename(filename);
                 const title = titleFrom(file);
-                return ` ** xref:${filepath}[${title}]`;
+                return ` ** xref:languages:${filepath}[${title}]`;
             }
         }))
-        .pipe(inject(src('../core/camel-core-engine/src/main/docs/eips/*.adoc').pipe(sort()), {
+        .pipe(inject(src('../core/camel-core-engine/src/main/docs/modules/eips/pages/*.adoc').pipe(sort()), {
             removeTags: true,
             name: 'eips',
             transform: (filename, file) => {
                 const filepath = path.basename(filename);
                 const title = titleFrom(file);
-                return ` ** xref:${filepath}[${title}]`;
+                return ` ** xref:eips:${filepath}[${title}]`;
             }
         }))
         .pipe(rename('nav.adoc'))
@@ -196,8 +198,8 @@ function createComponentExamples() {
 
 const symlinks = parallel(
     series(deleteComponentSymlinks, createComponentSymlinks),
-    series(deleteComponentImageSymlinks, createComponentImageSymlinks),
-    series(deleteUserManualSymlinks, createUserManualSymlinks)
+    series(deleteComponentImageSymlinks, createComponentImageSymlinks)
+    // series(deleteUserManualSymlinks, createUserManualSymlinks)
 );
 const nav = parallel(createComponentNav, createUserManualNav);
 const examples = series(deleteExamples, createUserManualExamples, createComponentExamples);
