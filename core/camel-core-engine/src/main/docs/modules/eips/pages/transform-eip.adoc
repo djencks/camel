@@ -3,7 +3,7 @@
 
 See below for details
 
-* xref:message-translator.adoc[Message Translator]
+* xref:ROOT:message-translator.adoc[Message Translator]
 
 == Options
 
