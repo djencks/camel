@@ -11,7 +11,7 @@ The Sticky EIP supports 1 options which are listed below:
 [width="100%",cols="2,5,^1,2",options="header"]
 |===
 | Name | Description | Default | Type
-| *correlationExpression* | *Required* The correlation expression to use to calculate the correlation key |  | NamespaceAware Expression
+| *correlationExpression* | *Required* The correlation expression to use to calculate the correlation key |  | ExpressionSubElementDefinition
 |===
 // eip options: END
 

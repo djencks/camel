@@ -1,5 +1,4 @@
-[[circuitBreaker-eip]]
-= CircuitBreaker EIP
+= Circuit Breaker EIP
 
 The Circuit Breaker pattern is inspired by the real-world electrical circuit breaker,
 which is used to detect excessive current draw and fail fast to protect electrical equipment.
@@ -58,4 +57,3 @@ Camel provides two implementations of this pattern:
 
 * xref:hystrix-eip.adoc[Hystrix] - Using the Netflix Hystrix implementation
 * xref:resilience4j-eip.adoc[Resilience4j] - Using the Resilience4j implementation
-
