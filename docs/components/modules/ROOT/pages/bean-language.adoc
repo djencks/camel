@@ -178,7 +178,7 @@ We have some test cases you can look at if it'll help
 is a JUnit test case showing the Java xref:manual::dsl.adoc[DSL] use of the bean
 expression being used in a filter
 * https://github.com/apache/camel/blob/master/components/camel-spring/src/test/resources/org/apache/camel/spring/processor/aggregator.xml[aggregator.xml]
-is a Spring XML test case for the xref:manual::aggregate-eip.adoc[Aggregator] which
+is a Spring XML test case for the xref:manual:eips:aggregate-eip.adoc[Aggregator] which
 uses a bean method call to test for the completion of the aggregation.
 
 include::camel-spring-boot::page$bean-starter.adoc[]
