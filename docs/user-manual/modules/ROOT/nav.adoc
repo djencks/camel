@@ -64,7 +64,7 @@
  ** xref:eips:batch-config-eip.adoc[Batch-config EIP]
  ** xref:eips:bean-eip.adoc[Bean EIP]
  ** xref:eips:choice-eip.adoc[Choice EIP]
- ** xref:eips:circuitBreaker-eip.adoc[CircuitBreaker EIP]
+ ** xref:eips:circuitBreaker-eip.adoc[Circuit Breaker EIP]
  ** xref:eips:claimCheck-eip.adoc[Claim Check EIP]
  ** xref:eips:content-based-router-eip.adoc[Content Based Router]
  ** xref:eips:content-filter-eip.adoc[Content Filter]
