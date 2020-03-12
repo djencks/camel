@@ -153,18 +153,18 @@ xref:languages.adoc[Languages]; the following languages are supported
 out of the box
 
 * xref:components::bean-language.adoc[Bean Language] for using Java for expressions
-* xref:constant-language.adoc[Constant]
-* xref:header-language.adoc[Header]
+* xref:languages:constant-language.adoc[Constant]
+* xref:languages:header-language.adoc[Header]
 * xref:components::jsonpath-language.adoc[JSonPath]
 * xref:components::mvel-language.adoc[Mvel]
 * xref:components::ognl-language.adoc[OGNL]
-* xref:ref-language.adoc[Ref Language]
-* xref:exchangeProperty-language.adoc[ExchangeProperty]
+* xref:languages:ref-language.adoc[Ref Language]
+* xref:languages:exchangeProperty-language.adoc[ExchangeProperty]
 ** xref:components::groovy-language.adoc[Groovy]
-* xref:simple-language.adoc[Simple]
-** xref:file-language.adoc[File Language]
+* xref:languages:simple-language.adoc[Simple]
+** xref:languages:file-language.adoc[File Language]
 * xref:components::spel-language.adoc[Spring Expression Language]
-* xref:tokenize-language.adoc[Tokenizer]
+* xref:languages:tokenize-language.adoc[Tokenizer]
 * xref:components::xpath-language.adoc[XPath]
 * xref:components::xquery-language.adoc[XQuery]
 

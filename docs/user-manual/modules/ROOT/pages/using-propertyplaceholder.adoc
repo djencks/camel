@@ -293,9 +293,9 @@ template.sendBody("{{cool.start}}", "Hello World");
 
 
 [[UsingPropertyPlaceholder-Examplewithlanguage]]
-== Example with xref:simple-language.adoc[Simple] language
+== Example with xref:languages:simple-language.adoc[Simple] language
 
-The xref:simple-language.adoc[Simple] language now also support using property
+The xref:languages:simple-language.adoc[Simple] language now also support using property
 placeholders, for example in the route below:
 
 
@@ -308,7 +308,7 @@ cheese.quote=Camel rocks
     .transform().simple("Hi ${body} do you think ${properties:cheese.quote}?");
 ----
 
-You can also specify the location in the xref:simple-language.adoc[Simple]
+You can also specify the location in the xref:languages:simple-language.adoc[Simple]
 language for example:
 
 
@@ -822,10 +822,10 @@ the `${}` notation. And in the Camel routes we use the Camel
 placeholder notation with `{{ }}`.
 
 [[UsingPropertyPlaceholder-ClashingSpringPropertyPlaceholderswithCamelsLanguage]]
-== Clashing Spring Property Placeholders with Camels xref:simple-language.adoc[Simple] Language
+== Clashing Spring Property Placeholders with Camels xref:languages:simple-language.adoc[Simple] Language
 
 Take notice when using Spring bridging placeholder then the
-spring `${}` syntax clashes with the xref:simple-language.adoc[Simple] in
+spring `${}` syntax clashes with the xref:languages:simple-language.adoc[Simple] in
 Camel, and therefore take care.
 
 Example:
@@ -838,7 +838,7 @@ Example:
 ----
 
 clashes with Spring property placeholders, and you should
-use `$simple{}` to indicate using the xref:simple-language.adoc[Simple]
+use `$simple{}` to indicate using the xref:languages:simple-language.adoc[Simple]
 language in Camel.
 
 
