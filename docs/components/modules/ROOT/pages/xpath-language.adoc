@@ -129,7 +129,7 @@ exchange:
 |function:properties |key for property |String |To lookup a property using the
 xref:properties-component.adoc[Properties] component (property placeholders).
 
-|function:simple |simple expression |Object |To evaluate a xref:manual::simple-language.adoc[Simple] expression.
+|function:simple |simple expression |Object |To evaluate a xref:manual:languages:simple-language.adoc[Simple] expression.
 |===
 
 CAUTION: `function:properties` and `function:simple` is not supported

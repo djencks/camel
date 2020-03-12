@@ -109,7 +109,7 @@ script configured on the endpoint.
 
 == Examples
 
-For example you can use the xref:manual::simple-language.adoc[Simple] language to
+For example you can use the xref:manual:languages:simple-language.adoc[Simple] language to
 Message Translator a message:
 
 In case you want to convert the message body type you can do this as
