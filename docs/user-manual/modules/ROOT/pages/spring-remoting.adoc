@@ -6,7 +6,7 @@ the underlying transport mechanism. The nice thing about this approach
 is we can use any of the Camel transport
 xref:components::index.adoc[Components] to communicate between beans.
 
-It also means we can use xref:content-based-router-eip.adoc[Content Based
+It also means we can use xref:eips:content-based-router-eip.adoc[Content Based
 Router] and the other
 xref:enterprise-integration-patterns.adoc[Enterprise Integration
 Patterns] in between the beans; in particular we can use
@@ -359,7 +359,7 @@ $\{ }.
 Any other value is consider to be a type declaration instead - see the
 next section about specifying types for overloaded methods.
 
-When invoking a xref:bean-eip.adoc[Bean] you can instruct Camel to invoke a
+When invoking a xref:eips:bean-eip.adoc[Bean] you can instruct Camel to invoke a
 specific method by providing the method name:
 
 [source,syntaxhighlighter-pre]
@@ -465,7 +465,7 @@ use `.to` instead as shown:
 
 *Since Camel 2.8*
 
-If you have a xref:bean-eip.adoc[Bean] with overloaded methods, you can now
+If you have a xref:eips:bean-eip.adoc[Bean] with overloaded methods, you can now
 specify parameter types in the method name so Camel can match the method
 you intend to use.
 

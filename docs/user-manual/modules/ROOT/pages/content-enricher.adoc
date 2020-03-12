@@ -108,9 +108,9 @@ xref:exchange.adoc[Exchange]. For example you cannot set a filename in
 the `Exchange.FILE_NAME` header and use `pollEnrich` to consume only
 that file. For that you *must* set the filename in the endpoint URI.
 
-Instead of using `enrich` you can use xref:recipientList-eip.adoc[Recipient
+Instead of using `enrich` you can use xref:eips:recipientList-eip.adoc[Recipient
 List] and have dynamic endpoints and define an `AggregationStrategy` on
-the xref:recipientList-eip.adoc[Recipient List] which then would work as a
+the xref:eips:recipientList-eip.adoc[Recipient List] which then would work as a
 `enrich` would do.
 
 pollEnrich only accept one message as response. That means that if you
@@ -160,18 +160,18 @@ to be used to merge the reply from the external service, into a single
 outgoing message. By default Camel will use the reply from the external
 service as outgoing message. From *Camel 2.12* onwards you can also use
 a POJO as the `AggregationStrategy`, see the
-xref:aggregate-eip.adoc[Aggregate] page for more details.
+xref:eips:aggregate-eip.adoc[Aggregate] page for more details.
 
 |`strategyMethodName` |  |*Camel 2.12:* This option can be used to
 explicit declare the method name to use, when using POJOs as the
-`AggregationStrategy`. See the xref:aggregate-eip.adoc[Aggregate] page for
+`AggregationStrategy`. See the xref:eips:aggregate-eip.adoc[Aggregate] page for
 more details.
 
 |`strategyMethodAllowNull` |`false` |*Camel 2.12:* If this option is
 `false` then the aggregate method is not used if there was no data to
 enrich. If this option is `true` then `null` values is used as the
 `oldExchange` (when no data to enrich), when using POJOs as the
-`AggregationStrategy`. See the xref:aggregate-eip.adoc[Aggregate] page for
+`AggregationStrategy`. See the xref:eips:aggregate-eip.adoc[Aggregate] page for
 more details.
 
 |`aggregateOnException` |`false` |*Camel 2.14:* If this option is
@@ -185,7 +185,7 @@ to suppress the exception or set a custom message body etc.
 the parent and the resource exchange. Enrich will by default not share
 unit of work between the parent exchange and the resource exchange. This
 means the resource exchange has its own individual unit of work. See
-xref:split-eip.adoc[Splitter] for more information and example.
+xref:eips:split-eip.adoc[Splitter] for more information and example.
 
 |`cacheSize` |  |*Camel 2.16:* Allows to configure the cache size for
 the `ProducerCache` which caches producers for reuse in the enrich. Will
@@ -373,18 +373,18 @@ to be used to merge the reply from the external service, into a single
 outgoing message. By default Camel will use the reply from the external
 service as outgoing message. From *Camel 2.12* onwards you can also use
 a POJO as the `AggregationStrategy`, see the
-xref:aggregate-eip.adoc[Aggregate] page for more details.
+xref:eips:aggregate-eip.adoc[Aggregate] page for more details.
 
 |`strategyMethodName` |  |*Camel 2.12:* This option can be used to
 explicit declare the method name to use, when using POJOs as the
-`AggregationStrategy`. See the xref:aggregate-eip.adoc[Aggregate] page for
+`AggregationStrategy`. See the xref:eips:aggregate-eip.adoc[Aggregate] page for
 more details.
 
 |`strategyMethodAllowNull` |`false` |*Camel 2.12:* If this option is
 `false` then the aggregate method is not used if there was no data to
 enrich. If this option is `true` then `null` values is used as the
 `oldExchange` (when no data to enrich), when using POJOs as the
-`AggregationStrategy`. See the xref:aggregate-eip.adoc[Aggregate] page for
+`AggregationStrategy`. See the xref:eips:aggregate-eip.adoc[Aggregate] page for
 more details.
 
 |`timeout` |`-1` |Timeout in millis when polling from the external
