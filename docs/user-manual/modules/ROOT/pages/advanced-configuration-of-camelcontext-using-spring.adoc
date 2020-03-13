@@ -101,7 +101,7 @@ xref:stream-caching.adoc[Stream caching] strategy.
 RuntimeEndpointRegistry implementation.
 
 |Logger |0..1 |*Camel 2.12.4/2.13.1:* To use provided org.slf4j.Logger
-for xref:eips:components::log-component.adoc[Log] component and xref:eips:log-eip.adoc[log() EIP].
+for xref:components::log-component.adoc[Log] component and xref:eips:log-eip.adoc[log() EIP].
 
 |AsyncProcessorAwaitManager |0..1 |*Camel 2.15:* To use a 3rd part async
 process await manager.
