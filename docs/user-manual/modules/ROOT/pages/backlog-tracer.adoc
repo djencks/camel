@@ -56,9 +56,9 @@ do "to*" to match any to. Or use "route-foo*" to match any foo routes.
 
 |traceFilter |`null` |Allow to configure a filter as a xref:predicate.adoc[Predicate] using
 any of the Camel xref:languages.adoc[languages]. But default the
-xref:languages:simple-language.adoc[Simple] language is used. For example to filter on
+xref:components:languages:simple-language.adoc[Simple] language is used. For example to filter on
 messages with a given header, use `${header.foo} != null`. To use
-xref:components::groovy-language.adoc[Groovy] then prefix the value with "groovy:". And
+xref:components:languages:groovy-language.adoc[Groovy] then prefix the value with "groovy:". And
 similar for the other languages.
 
 |removeOnDump |`true` |Whether to remove the traced messages that was returned when invoking

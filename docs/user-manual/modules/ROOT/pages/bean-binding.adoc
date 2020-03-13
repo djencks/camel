@@ -231,9 +231,9 @@ the method option
 * The value is a numeric value such as `123` or `7`
 * The value is a String enclosed with either single or double quotes
 * The value is null which denotes a `null` value
-* It can be evaluated using the xref:languages:simple-language.adoc[Simple] language, which
+* It can be evaluated using the xref:components:languages:simple-language.adoc[Simple] language, which
 means you can use, e.g., body, header.foo and other
-xref:languages:simple-language.adoc[Simple] tokens. Notice the tokens must be enclosed with
+xref:components:languages:simple-language.adoc[Simple] tokens. Notice the tokens must be enclosed with
 $\{ }.
 
 Any other value is consider to be a type declaration instead - see the
@@ -276,7 +276,7 @@ body as shown:
 .bean(OrderService.class, "doSomething(${body}, true)") 
 ----
 
-The syntax of the parameters is using the xref:languages:simple-language.adoc[Simple]
+The syntax of the parameters is using the xref:components:languages:simple-language.adoc[Simple]
 expression language so we have to use $\{ } placeholders in the body to
 refer to the message body.
 
@@ -312,7 +312,7 @@ first has the content 'World' (without quotes), and the 2nd has the
 value of 5.
 Camel will automatically convert these values to the parameters' types.
 
-Having the power of the xref:languages:simple-language.adoc[Simple] language allows us to
+Having the power of the xref:components:languages:simple-language.adoc[Simple] language allows us to
 bind to message headers and other values such as:
 
 [source,syntaxhighlighter-pre]
@@ -320,7 +320,7 @@ bind to message headers and other values such as:
 .bean(OrderService.class, "doSomething(${body}, ${header.high})") 
 ----
 
-You can also use the OGNL support of the xref:languages:simple-language.adoc[Simple]
+You can also use the OGNL support of the xref:components:languages:simple-language.adoc[Simple]
 expression language. Now suppose the message body is an object which has
 a method named `asXml`. To invoke the `asXml` method we can do as
 follows:

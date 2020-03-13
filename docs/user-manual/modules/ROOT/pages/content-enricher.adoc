@@ -135,8 +135,8 @@ confluenceTableSmall
 |`uri` |  |The endpoint uri for the external service to enrich from. You
 must use either `uri` or `ref`. *Important:* From Camel 2.16 onwards,
 this option is removed, and you use an xref:expression.adoc[Expression]
-to configure the uri, such as xref:languages:simple-language.adoc[Simple] or
-xref:languages:constant-language.adoc[Constant] or any other dynamic language that can
+to configure the uri, such as xref:components:languages:simple-language.adoc[Simple] or
+xref:components:languages:constant-language.adoc[Constant] or any other dynamic language that can
 compute the uri dynamically using values from the current
 xref:exchange.adoc[Exchange].
 
@@ -144,13 +144,13 @@ xref:exchange.adoc[Exchange].
 from. You must use either `uri` or `ref`.  **Important:** From Camel
 2.16 onwards, this option is removed, and you use an
 xref:expression.adoc[Expression] to configure the uri, such as
-xref:languages:simple-language.adoc[Simple] or xref:languages:constant-language.adoc[Constant] or any other
+xref:components:languages:simple-language.adoc[Simple] or xref:components:languages:constant-language.adoc[Constant] or any other
 dynamic language that can compute the uri dynamically using values from
 the current  xref:exchange.adoc[Exchange].
 
 |expression |  |*Camel 2.16:* Mandatory.
 The xref:expression.adoc[Expression] to configure the uri, such as
-xref:languages:simple-language.adoc[Simple] or xref:languages:constant-language.adoc[Constant] or any other
+xref:components:languages:simple-language.adoc[Simple] or xref:components:languages:constant-language.adoc[Constant] or any other
 dynamic language that can compute the uri dynamically using values from
 the current  xref:exchange.adoc[Exchange].
 
@@ -348,8 +348,8 @@ polling
 |`uri` |  |The endpoint uri for the external service to enrich from. You
 must use either `uri` or `ref`. **Important:** From Camel 2.16 onwards,
 this option is removed, and you use an xref:expression.adoc[Expression]
-to configure the uri, such as xref:languages:simple-language.adoc[Simple] or
-xref:languages:constant-language.adoc[Constant] or any other dynamic language that can
+to configure the uri, such as xref:components:languages:simple-language.adoc[Simple] or
+xref:components:languages:constant-language.adoc[Constant] or any other dynamic language that can
 compute the uri dynamically using values from the current
  xref:exchange.adoc[Exchange].
 
@@ -357,13 +357,13 @@ compute the uri dynamically using values from the current
 from. You must use either `uri` or `ref`. **Important:** From Camel 2.16
 onwards, this option is removed, and you use an
 xref:expression.adoc[Expression] to configure the uri, such as
-xref:languages:simple-language.adoc[Simple] or xref:languages:constant-language.adoc[Constant] or any other
+xref:components:languages:simple-language.adoc[Simple] or xref:components:languages:constant-language.adoc[Constant] or any other
 dynamic language that can compute the uri dynamically using values from
 the current  xref:exchange.adoc[Exchange].
 
 |`expression` |  |**Camel 2.16:** Mandatory.
 The xref:expression.adoc[Expression] to configure the uri, such as
-xref:languages:simple-language.adoc[Simple] or xref:languages:constant-language.adoc[Constant] or any other
+xref:components:languages:simple-language.adoc[Simple] or xref:components:languages:constant-language.adoc[Constant] or any other
 dynamic language that can compute the uri dynamically using values from
 the current xref:exchange.adoc[Exchange].
 

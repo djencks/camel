@@ -506,21 +506,21 @@ camel routes without them knowing
 // <!-- languages: START -->
 
 * Expression Languages
-** xref:components::bean-language.adoc[Bean method]
-** xref:languages:constant-language.adoc[Constant]
-** xref:languages:exchangeProperty-language.adoc[ExchangeProperty]
-** xref:languages:file-language.adoc[File]
-** xref:components::groovy-language.adoc[Groovy]
-** xref:languages:header-language.adoc[Header]
-** xref:components::hl7terser-language.adoc[HL7 Terser]
-** xref:components::mvel-language.adoc[MVEL]
-** xref:components::ognl-language.adoc[OGNL]
-** xref:languages:ref-language.adoc[Ref]
-** xref:languages:simple-language.adoc[Simple]
-** xref:components::spel-language.adoc[SpEL]
-** xref:languages:tokenize-language.adoc[Tokenize]
-** xref:components::xpath-language.adoc[XPath]
-** xref:components::xquery-language.adoc[XQuery]
+** xref:components:languages:bean-language.adoc[Bean method]
+** xref:components:languages:constant-language.adoc[Constant]
+** xref:components:languages:exchangeProperty-language.adoc[ExchangeProperty]
+** xref:components:languages:file-language.adoc[File]
+** xref:components:languages:groovy-language.adoc[Groovy]
+** xref:components:languages:header-language.adoc[Header]
+** xref:components:languages:hl7terser-language.adoc[HL7 Terser]
+** xref:components:languages:mvel-language.adoc[MVEL]
+** xref:components:languages:ognl-language.adoc[OGNL]
+** xref:components:languages:ref-language.adoc[Ref]
+** xref:components:languages:simple-language.adoc[Simple]
+** xref:components:languages:spel-language.adoc[SpEL]
+** xref:components:languages:tokenize-language.adoc[Tokenize]
+** xref:components:languages:xpath-language.adoc[XPath]
+** xref:components:languages:xquery-language.adoc[XQuery]
 
 // <!-- languages: END -->
 

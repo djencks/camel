@@ -51,14 +51,7 @@
  ** xref:java-dsl.adoc[Java DSL]
  ** xref:spring.adoc[Spring support]
 * xref:using-osgi-blueprint-with-camel.adoc[Using OSGi blueprint with Camel]
-* Supported expression languages
- ** xref:languages:constant-language.adoc[Constant Language]
- ** xref:languages:exchangeProperty-language.adoc[ExchangeProperty Language]
- ** xref:languages:file-language.adoc[File Language]
- ** xref:languages:header-language.adoc[Header Language]
- ** xref:languages:ref-language.adoc[Ref Language]
- ** xref:languages:simple-language.adoc[Simple Language]
- ** xref:languages:tokenize-language.adoc[Tokenize Language]
+* Supported expression languages -- see Components documentation
 * xref:enterprise-integration-patterns.adoc[Enterprise Integration Patterns]
  ** xref:eips:aggregate-eip.adoc[Aggregate EIP]
  ** xref:eips:batch-config-eip.adoc[Batch-config EIP]
