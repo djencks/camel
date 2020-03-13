@@ -20,19 +20,19 @@ site:
 
 content:
   sources:
-    - url: ../
+    - url: ./../
       branches: HEAD
       start_path: docs/user-manual
-    - url: ../
+    - url: ./../
       branches: HEAD
       start_path: core/camel-core-engine/src/main/docs
-    - url: ../
+    - url: ./../
       branches: HEAD
       start_path: core/camel-core-languages/src/main/docs
-    - url: ../
+    - url: ./../
       branches: HEAD
       start_path: core/camel-xml-jaxp/src/main/docs
-    - url: ../
+    - url: ./../
       branches: HEAD
       start_path: docs/components
 
