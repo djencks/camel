@@ -8,17 +8,17 @@ created, but has since grown more powerful. It is primarily intended for
 being a really small and simple language for evaluating
 Expressions and Predicates
 without requiring any new dependencies or knowledge of
-xref:components::xpath-language.adoc[XPath]; so it is ideal for testing in camel-core. The
+xref:xpath-language.adoc[XPath]; so it is ideal for testing in camel-core. The
 idea was to cover 95% of the common use cases when you need a little bit
 of expression based script in your Camel routes.
 
 However for much more complex use cases you are generally recommended to
 choose a more expressive and powerful language such as:
 
-* xref:components::groovy-language.adoc[Groovy]
-* xref:components::spel-language.adoc[SpEL]
-* xref:components::mvel-component.adoc[MVEL]
-* xref:components::ognl-language.adoc[OGNL]
+* xref:groovy-language.adoc[Groovy]
+* xref:spel-language.adoc[SpEL]
+* xref:mvel-language.adoc[MVEL]
+* xref:ognl-language.adoc[OGNL]
 
 The simple language uses `${body`} placeholders for complex expressions
 where the expression contains constant literals. The $\{ } placeholders

@@ -31,7 +31,7 @@ The log DSL is much lighter and meant for logging human logs such as Starting to
 
 == Samples
 
-You can use the log DSL which allows you to use xref:languages:simple-language.adoc[Simple] language to construct a dynamic message which gets logged.
+You can use the log DSL which allows you to use xref:components:languages:simple-language.adoc[Simple] language to construct a dynamic message which gets logged.
 
 For example you can do
 
