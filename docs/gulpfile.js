@@ -36,7 +36,7 @@ function deleteComponentImageSymlinks() {
 }
 
 function createComponentSymlinks() {
-    const f = filter(['**','!**/*-language.adoc'])
+    const f = filter(['**','!**/*-language.adoc', '!**/*-dataformat.adoc'])
     return src(['../core/camel-base/src/main/docs/*.adoc','../components/{*,*/*}/src/main/docs/*.adoc'])
         .pipe(f)
         .pipe(map((file, done) => {
@@ -58,13 +58,33 @@ function createComponentSymlinks() {
         .pipe(dest('components/modules/ROOT/pages/'));
 }
 
+function createComponentDataFormatSymlinks() {
+    return src(['../components/{*,*/*}/src/main/docs/*-dataformat.adoc'])
+        .pipe(map((file, done) => {
+            // this flattens the output to just .../pages/....adoc
+            // instead of .../pages/camel-.../src/main/docs/....adoc
+            file.base = path.dirname(file.path);
+            done(null, file);
+        }))
+        // Antora disabled symlinks, there is an issue open
+        // https://gitlab.com/antora/antora/issues/188
+        // to reinstate symlink support, until that's resolved
+        // we'll simply copy over instead of creating symlinks
+        // .pipe(symlink('components/modules/ROOT/pages/', {
+        //     relativeSymlinks: true
+        // }));
+        // uncomment above .pipe() and remove the .pipe() below
+        // when antora#188 is resolved
+        .pipe(insertSourceAttribute())
+        .pipe(dest('components/modules/dataformats/pages/'));
+}
+
 function createComponentLanguageSymlinks() {
     return src(['../components/{*,*/*}/src/main/docs/*-language.adoc'])
         .pipe(map((file, done) => {
             // this flattens the output to just .../pages/....adoc
             // instead of .../pages/camel-.../src/main/docs/....adoc
             file.base = path.dirname(file.path);
-            console.log(`copying ${file.path}`)
             done(null, file);
         }))
         // Antora disabled symlinks, there is an issue open
@@ -149,7 +169,7 @@ function insertSourceAttribute() {
 function createComponentNav() {
     return src('component-nav.adoc.template')
         .pipe(insertGeneratedNotice())
-        .pipe(inject(src(['components/modules/ROOT/pages/**/*.adoc']).pipe(sort()), {
+        .pipe(inject(src(['components/modules/ROOT/pages/**/*.adoc', '!components/modules/ROOT/pages/index.adoc']).pipe(sort()), {
             removeTags: true,
             transform: (filename, file) => {
                 const filepath = path.basename(filename);
@@ -161,6 +181,21 @@ function createComponentNav() {
         .pipe(dest('components/modules/ROOT/'))
 }
 
+function createComponentDataFormatsNav() {
+    return src('component-dataformats-nav.adoc.template')
+        .pipe(insertGeneratedNotice())
+        .pipe(inject(src(['components/modules/dataformats/pages/**/*.adoc']).pipe(sort()), {
+            removeTags: true,
+            transform: (filename, file) => {
+                const filepath = path.basename(filename);
+                const title = titleFrom(file);
+                return `** xref:dataformats:${filepath}[${title}]`;
+            }
+        }))
+        .pipe(rename('nav.adoc'))
+        .pipe(dest('components/modules/dataformats/'))
+}
+
 function createComponentLanguagesNav() {
     return src('component-languages-nav.adoc.template')
         .pipe(insertGeneratedNotice())
@@ -169,7 +204,7 @@ function createComponentLanguagesNav() {
             transform: (filename, file) => {
                 const filepath = path.basename(filename);
                 const title = titleFrom(file);
-                return `** xref:${filepath}[${title}]`;
+                return `** xref:languages:${filepath}[${title}]`;
             }
         }))
         .pipe(rename('nav.adoc'))
@@ -208,7 +243,6 @@ const extractExamples = function(file, enc, next) {
     let exampleFiles = new Set()
     while (example = includes.exec(asciidoc)) {
         let examplePath = path.resolve(path.join('..', example[1]));
-        // console.log(`examplePath: ${examplePath}`)
         exampleFiles.add(examplePath);
     }
 
@@ -250,11 +284,11 @@ function createComponentExamples() {
 }
 
 const symlinks = parallel(
-    series(deleteComponentSymlinks, createComponentSymlinks, createComponentLanguageSymlinks),
+    series(deleteComponentSymlinks, createComponentSymlinks, createComponentDataFormatSymlinks, createComponentLanguageSymlinks),
     series(deleteComponentImageSymlinks, createComponentImageSymlinks)
     // series(deleteUserManualSymlinks, createUserManualSymlinks)
 );
-const nav = parallel(createComponentNav, createComponentLanguagesNav, createUserManualNav);
+const nav = parallel(createComponentNav, createComponentDataFormatsNav, createComponentLanguagesNav, createUserManualNav);
 const examples = series(deleteExamples, createUserManualExamples, createUserManualEIPExamples, createUserManualLanguageExamples, createComponentExamples);
 
 exports.symlinks = symlinks;
