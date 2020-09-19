@@ -623,6 +623,9 @@ public class UpdateReadmeMojo extends AbstractGeneratorMojo {
                 }
             }
 
+            //TODO use kind+s rather than components
+            newLines.add("include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/" + name + ".adoc[]");
+
             if (!manualAttributes.isEmpty()) {
                 newLines.add("//Manually maintained attributes");
                 for (Map.Entry<String, String> entry : manualAttributes.entrySet()) {
