@@ -5,6 +5,7 @@
 :description: Camel unit testing
 :since: 2.9
 :supportLevel: Stable
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/test.adoc[]
 
 *Since Camel {since}*
 

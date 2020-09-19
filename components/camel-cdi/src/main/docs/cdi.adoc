@@ -5,6 +5,7 @@
 :description: Using Camel with CDI
 :since: 2.10
 :supportLevel: Stable
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/cdi.adoc[]
 
 *Since Camel {since}*
 

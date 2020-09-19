@@ -5,6 +5,7 @@
 :description: Distributed tracing using OpenTelemetry
 :since: 3.5
 :supportLevel: Preview
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/opentelemetry.adoc[]
 
 *Since Camel {since}*
 

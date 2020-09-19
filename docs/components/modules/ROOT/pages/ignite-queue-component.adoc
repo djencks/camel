@@ -10,6 +10,7 @@
 :component-header: Only producer is supported
 //Manually maintained attributes
 :group: Ignite
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/ignite-queue.adoc[]
 
 *Since Camel {since}*
 

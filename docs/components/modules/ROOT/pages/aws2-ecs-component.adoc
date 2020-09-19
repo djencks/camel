@@ -10,6 +10,7 @@
 :component-header: Only producer is supported
 //Manually maintained attributes
 :group: AWS 2
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/aws2-ecs.adoc[]
 
 *Since Camel {since}*
 

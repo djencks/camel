@@ -10,6 +10,7 @@
 :component-header: Only consumer is supported
 //Manually maintained attributes
 :group: Google
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/google-sheets-stream.adoc[]
 
 *Since Camel {since}*
 

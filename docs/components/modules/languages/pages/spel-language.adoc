@@ -9,6 +9,7 @@
 :supportLevel: Stable
 //Manually maintained attributes
 :group: Spring
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/spel.adoc[]
 
 *Since Camel {since}*
 

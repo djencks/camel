@@ -5,6 +5,7 @@
 :description: Circuit Breaker EIP using MicroProfile Fault Tolerance
 :since: 3.3
 :supportLevel: Preview
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/microprofile-fault-tolerance.adoc[]
 
 *Since Camel {since}*
 

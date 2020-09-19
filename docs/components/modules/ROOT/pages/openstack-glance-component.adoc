@@ -10,6 +10,7 @@
 :component-header: Only producer is supported
 //Manually maintained attributes
 :group: OpenStack
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/openstack-glance.adoc[]
 
 *Since Camel {since}*
 

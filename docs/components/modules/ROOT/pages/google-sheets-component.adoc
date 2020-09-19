@@ -10,6 +10,7 @@
 :component-header: Both producer and consumer are supported
 //Manually maintained attributes
 :group: Google
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/google-sheets.adoc[]
 
 *Since Camel {since}*
 

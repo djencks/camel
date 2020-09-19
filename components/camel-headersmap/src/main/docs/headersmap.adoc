@@ -5,6 +5,7 @@
 :description: Fast case-insensitive headers map implementation
 :since: 2.20
 :supportLevel: Stable
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/headersmap.adoc[]
 
 *Since Camel {since}*
 

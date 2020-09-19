@@ -8,6 +8,7 @@
 :component-header: Only producer is supported
 //Manually maintained attributes
 :group: Kubernetes
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/openshift-build-configs.adoc[]
 
 *Since Camel {since}*
 

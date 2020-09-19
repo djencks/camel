@@ -8,6 +8,7 @@
 :component-header: Only producer is supported
 //Manually maintained attributes
 :group: Spring
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/spring-ldap.adoc[]
 
 *Since Camel {since}*
 

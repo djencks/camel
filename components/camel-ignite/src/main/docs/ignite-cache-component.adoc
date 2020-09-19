@@ -8,6 +8,7 @@
 :component-header: Both producer and consumer are supported
 //Manually maintained attributes
 :group: Ignite
+include::{cq-version}@camel-quarkus:ROOT:partial$ignite-cache.adoc[]
 
 *Since Camel {since}*
 

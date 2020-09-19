@@ -5,6 +5,7 @@
 :description: Camel unit testing with JUnit 5
 :since: 3.0
 :supportLevel: Stable
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/test-junit5.adoc[]
 
 *Since Camel {since}*
 

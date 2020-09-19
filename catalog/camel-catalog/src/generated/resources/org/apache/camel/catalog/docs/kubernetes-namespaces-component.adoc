@@ -8,6 +8,7 @@
 :component-header: Both producer and consumer are supported
 //Manually maintained attributes
 :group: Kubernetes
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/kubernetes-namespaces.adoc[]
 
 *Since Camel {since}*
 

@@ -10,6 +10,7 @@
 :component-header: Only producer is supported
 //Manually maintained attributes
 :group: AWS
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/aws-kms.adoc[]
 
 *Since Camel {since}*
 

@@ -8,6 +8,7 @@
 :component-header: Only producer is supported
 //Manually maintained attributes
 :group: Google
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/google-bigquery.adoc[]
 
 *Since Camel {since}*
 

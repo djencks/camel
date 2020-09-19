@@ -8,6 +8,7 @@
 :component-header: Both producer and consumer are supported
 //Manually maintained attributes
 :group: Azure
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/azure-storage-blob.adoc[]
 
 *Since Camel {since}*
 

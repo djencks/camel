@@ -7,6 +7,7 @@
 :description: Security using Jasypt
 :since: 2.5
 :supportLevel: Stable
+include::{cq-version}@camel-quarkus:ROOT:partial$reference/components/jasypt.adoc[]
 
 *Since Camel {since}*
 

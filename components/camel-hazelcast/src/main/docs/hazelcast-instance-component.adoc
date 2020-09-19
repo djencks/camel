@@ -8,6 +8,7 @@
 :component-header: Only consumer is supported
 //Manually maintained attributes
 :group: Hazelcast
+include::{cq-version}@camel-quarkus:ROOT:partial$hazelcast-instance.adoc[]
 
 *Since Camel {since}*
 
